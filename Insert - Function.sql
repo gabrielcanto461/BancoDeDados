@@ -41,7 +41,7 @@ sexo VARCHAR(15), ramal INTEGER, cargo VARCHAR(50), id_Endereco INTEGER, idEquip
 
 select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1)
 
-select * from equipe
+select * from funcionario
 
 -- Inserir Equipe
 
