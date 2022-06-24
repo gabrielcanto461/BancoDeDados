@@ -50,7 +50,7 @@ create table funcionario(
 	ramal integer not null,
 	cargo varchar(50) not null,
 	id_Endereco integer not null,
-	id_Equipe integer not null
+	id_Equipe integer
 );
 
 create table problema(
