@@ -9,9 +9,9 @@ nome VARCHAR(50), cnpj INTEGER, email VARCHAR(50))
       END;
       $$ LANGUAGE 'plpgsql';
 
-select InsereContratante(1, 'Carlos', 123456789, 'carlos@ifsp.edu.br')
+select InsereContratante(1, 'Carlos', 123456789, 'carlos@ifsp.edu.br');
 
-select * from contratante
+select * from contratante;
 
 -- Inserir Projeto
 
@@ -24,9 +24,9 @@ nome VARCHAR(50), custo_Projeto float, id_Contratante INTEGER)
       END;
       $$ LANGUAGE 'plpgsql';
 
-select InsereProjeto(1, 'Service Desk', 1000.00, 1)
+select InsereProjeto(1, 'Service Desk', 1000.00, 1);
 
-select * from projeto
+select * from projeto;
 
 -- Inserir Funcionário
 
@@ -39,9 +39,9 @@ sexo VARCHAR(15), ramal INTEGER, cargo VARCHAR(50), id_Endereco INTEGER, idEquip
       END;
       $$ LANGUAGE 'plpgsql';
 
-select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1)
+select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 0,NULL);
 
-select * from funcionario
+select * from funcionario;
 
 -- Inserir Equipe
 
@@ -54,9 +54,9 @@ nome VARCHAR(50), id_Gerente INTEGER, especializacao VARCHAR(30))
       END;
       $$ LANGUAGE 'plpgsql';
 
-select InsereEquipe(1, 'Administrador de Banco de Dados', 1, 'PostgreeSQL')
+select InsereEquipe(1, 'Administrador de Banco de Dados', 1, 'PostgreeSQL');
 
-select * from equipe
+select * from equipe;
 
 -- Inserir problema
 
@@ -73,7 +73,7 @@ prioridade INTEGER , descricao VARCHAR(250), solucao VARCHAR(250), id_projeto IN
       $$ LANGUAGE 'plpgsql';
 	  
 	  
-select InsereProblema(0,'23/06/2022','24/06/2022','finalizado', 10, 'Computador não conecta na VPN.', 'Reiniciar a maquina', 1);
+select InsereProblema(1,'23/06/2022','24/06/2022','finalizado', 10, 'Computador não conecta na VPN.', 'Reiniciar a maquina', 1);
 
 select * from problema;
 
@@ -91,13 +91,9 @@ cep integer, cidade VARCHAR(50), uf VARCHAR(2), id_contratante INTEGER)
       $$ LANGUAGE 'plpgsql';
 	  
 	  
-select InsereEndereco(
-	0,'Satelite Iris','Rua Pst. Samuel de C. Chiminazzo', 'Brasil',13059688,'Campinas','SP',1
-);
+select InsereEndereco(1,'Satelite Iris','Rua Pst. Samuel de C. Chiminazzo', 'Brasil',13059688,'Campinas','SP',1);
 
 select * from endereco;
-
--- falta solicitacao,squad
 
 --inserir mudanca
 
@@ -112,7 +108,7 @@ prioridade INTEGER , descricao VARCHAR(250), objetivo VARCHAR(250), id_projeto I
       END;
       $$ LANGUAGE 'plpgsql';
 	  
-Select inseremudanca(0,'12/02/2022','12/03/2022','finalizado',2,'Alteração do logotipo', 
+Select inseremudanca(1,'12/02/2022','12/03/2022','finalizado',2,'Alteração do logotipo', 
 					 'Atualizar identidade visual', 1);
 
 select * from mudanca;
@@ -130,7 +126,7 @@ prioridade INTEGER , descricao VARCHAR(250), id_projeto INTEGER)
       END;
       $$ LANGUAGE 'plpgsql';
 	  
-Select InsereSolicitacao(0,'23/06/2022',null,'em aberto',2,'Criar nova database', 1);
+Select InsereSolicitacao(1,'23/06/2022',null,'em aberto',2,'Criar nova database', 1);
 
 select * from solicitacao;
 
