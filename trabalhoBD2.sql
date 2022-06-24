@@ -1,25 +1,3 @@
-modelo_Fisico.sql
-Quem pode acessar
-
-Propriedades do sistema
-Tipo
-SQL
-Tamanho
-4 KB
-Armazenamento usado
-5 KB
-Local
-BD2
-Proprietário
-Raphael Siqueira
-Modificado
-16 de mai. de 2022 por GABRIEL CERDAN OSTE DE MOURA
-Aberto
-19:58 por mim
-Criado em
-16 de mai. de 2022
-Adicionar uma descrição
-Os leitores podem fazer o download
 /*
 Modelagem Física - Sistema de Chamados
 
@@ -59,7 +37,7 @@ create table projeto(
 create table equipe(
 	id_Equipe integer,
 	nome varchar(50) not null,
-	id_Gerente integer not null,
+	id_Gerente integer,
 	especializacao varchar(30)
 );
 
