@@ -29,7 +29,7 @@ select * from log_endereco;
 select * from endereco;
 
 
-select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1, 1);
+select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1, null);
 select * from log_funcionario;
 select * from funcionario;
 
