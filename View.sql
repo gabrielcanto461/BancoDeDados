@@ -18,6 +18,39 @@ with data;
 
 select * from RankingSolucionador;
 
+
+create materialized view ProblemaMudanca as
+		select s.id_projeto
+		from squad s
+		intersect
+		select p.id_projeto
+		from problema p
+		INTERSECT
+		select m.id_mudanca
+		from mudanca m
+with data;
+
+select * from ProblemaMudanca;
+
+
+create materialized view ContratanteSemProjeto as
+		select id_Contratante from contratante
+		except
+		select id_Contratante from projeto
+with data;
+
+select * from ContratanteSemProjeto;
+
+
+create materialized view EquipeEmSquad as
+		select id_Equipe from equipe
+		union
+		select id_Equipe from squad
+with data;
+
+select * from EquipeEmSquad
+
+
 insert into equipe(id_Equipe, nome, id_gerente) values
 	(1, 'Proxxi', ),
 	(2, 'IBM', "Ciclano"),
