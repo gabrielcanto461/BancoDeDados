@@ -144,3 +144,14 @@ CREATE OR REPLACE FUNCTION InsereSquad(id_equipe INTEGER, id_projeto INTEGER)
 SELECT insereSquad(1,1);
 
 select * from squad;
+
+ -- remove function with cpf
+ 
+ CREATE OR REPLACE FUNCTION removeEndereco(integer)
+      RETURNS void AS $$
+      BEGIN
+        DELETE FROM funcionario WHERE cpf = $1;
+      END;
+      $$ LANGUAGE 'plpgsql';
+
+select removeFuncionario(123);
