@@ -29,21 +29,38 @@ select * from log_endereco;
 select * from endereco;
 
 
-select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1, null);
+select InsereFuncionario(1, 123456789, 'Antonio', 22000.00, 'M', '9700', 'Gerente', 1, 1);
 select * from log_funcionario;
 select * from funcionario;
 
 
 select InsereEquipe(1, 'Administrador de Banco de Dados', 1, 'PostgreeSQL');
-select InsereEquipe(2, 'Analista de Dados', null, 'MySQL');
-select InsereEquipe(3, 'Front End Developer', null, 'Figma');
-select InsereEquipe(4, 'Back End Developer', null, 'Javascript');
+select InsereEquipe(2, 'Analista de Dados', 'MySQL');
+select InsereEquipe(3, 'Front End Developer', 'Figma');
+select InsereEquipe(4, 'Back End Developer', 'Javascript');
 select * from log_equipe;
 select * from equipe;
 
 
 select InsereProblema(1,'23/06/2022','24/06/2022','finalizado', 10, 'Computador não conecta na VPN.',
 					  'Reiniciar a maquina', 1);
+select InsereProblema(2, '2022-01-02', 'finalizado', 1, 'B', 1);
+select InsereProblema(3, '2022-01-03', 'finalizado', 1, 'C', 1);
+select InsereProblema(4, '2022-01-04', 'finalizado', 2, 'D', 2);
+select InsereProblema(5, '2022-01-05', 'finalizado', 2, 'E', 2);
+select InsereProblema(6, '2022-01-06', 'finalizado', 2, 'F', 2);
+select InsereProblema(7, '2022-01-07', 'finalizado', 2, 'G', 3);
+select InsereProblema(8, '2022-01-08', 'finalizado', 3, 'H', 3);
+select InsereProblema(9, '2022-01-09', 'finalizado', 3, 'I', 3);
+select InsereProblema(10, '2022-01-10', 'finalizado', 3, 'J', 4);
+select InsereProblema(11, '2022-01-11', 'finalizado', 4, 'K', 4);
+select InsereProblema(12, '2022-01-12', 'finalizado', 5, 'L', 4);
+select InsereProblema(13, '2022-01-13', 'finalizado', 5, 'M', 5);
+select InsereProblema(14, '2022-01-14', 'finalizado', 5, 'N', 5);
+select InsereProblema(15, '2022-01-15', 'finalizado', 5, 'O', 5);
+select InsereProblema(16, '2022-01-16', 'finalizado', 1, 'P', 6);
+select InsereProblema(17, '2022-01-17', 'finalizado', 2, 'Q', 6);
+select InsereProblema(18, '2022-01-18', 'finalizado', 3, 'R', 6);
 select * from log_problema;
 select * from problema;
 
@@ -59,10 +76,24 @@ select * from log_solicitacao;
 select * from solicitacao;
 
 
-select insereSquad(1, 1);
+select insereSquad(1,1);
+select insereSquad(1, 2);
+select insereSquad(1, 3);
+select insereSquad(1, 4);
+select insereSquad(1, 5);
+select insereSquad(1, 6);
 select insereSquad(2, 1);
+select insereSquad(2, 2);
+select insereSquad(2, 3);
+select insereSquad(2, 4);
+select insereSquad(2, 5);
+select insereSquad(2, 6);
+select insereSquad(3, 1);
+select insereSquad(3, 2);
+select insereSquad(3, 3);
 select insereSquad(3, 4);
-select insereSquad(4, 6);
+select insereSquad(3, 5);
+select insereSquad(3, 6);
 select * from squad;
 
 
